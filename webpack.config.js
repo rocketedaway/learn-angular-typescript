@@ -5,8 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
+const isDevelopment = process.env === 'development';
+
 module.exports = {
-    devtool: 'inline-source-map',
     entry: './src/app.ts',
     output: {
         filename: '[name].bundle.js',
@@ -15,7 +16,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.ts$/,
                 loader: 'ts-loader',
                 options: {
                     transpileOnly: true
@@ -24,15 +25,16 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.tsx', 'js']
+        extensions: ['.ts', '.js']
     },
     plugins: [
         new ForkTsCheckerWebpackPlugin(),
         new HtmlWebpackPlugin({
-            hash: true,
+            hash: isDevelopment === true,
             filename: 'index.html',
             template: './src/index.html'
         }),
         new CleanWebpackPlugin(['dist'])
-    ]
+    ],
+    devtool: isDevelopment === true ? 'cheap-eval-source-map' : ''
 };

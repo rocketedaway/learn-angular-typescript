@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
-        "target": "ES6",
         "sourceMap": true,
-        "lib": [ "es2015", "es2016", "dom" ]
+        "target": "es6",
+        "lib": [ "es6", "dom" ],
+        "allowSyntheticDefaultImports": true
     }
 }
