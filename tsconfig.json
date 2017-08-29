@@ -1,8 +1,12 @@
 {
-    "compilerOptions": {
-        "sourceMap": true,
-        "target": "es6",
-        "lib": [ "es6", "dom" ],
-        "allowSyntheticDefaultImports": true
-    }
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es6",
+    "lib": [ "es6", "dom" ],
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ]
+  }
 }
