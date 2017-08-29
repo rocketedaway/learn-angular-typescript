@@ -6,11 +6,11 @@
  */
 
 import angular from 'angular'
-import PhoneListController from './controllers/phoneListController'
+import PhoneListComponent from './phone-list-component'
 
 const app = angular.module('phonecatApp', []);
 
-app.controller('PhoneListController', PhoneListController);
+app.component('pnoneList', PhoneListComponent);
 
 angular.bootstrap(document, ['phonecatApp']);
 
