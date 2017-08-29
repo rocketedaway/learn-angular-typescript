@@ -1,9 +1,10 @@
 'use strict';
 
 export default class PhoneListController {
-  constructor ($scope) {
-    // @TODO: Look into how to not use $scope. EG: this.phones = [...]
-    $scope.phones = [
+  public phones: Array<Object>
+
+  constructor () {
+    this.phones = [
       {
         name: 'Nexus S',
         snippet: 'Fast just got faster with Nexus S.'
