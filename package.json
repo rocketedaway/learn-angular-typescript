@@ -9,10 +9,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "angular": "^1.6.6",
-    "@types/angular": "^1.6.31"
+    "bootstrap": "^3.3.7"
   },
   "devDependencies": {
+    "@types/angular": "^1.6.31",
+    "angular": "^1.6.6",
     "clean-webpack-plugin": "^0.1.16",
     "fork-ts-checker-webpack-plugin": "^0.2.7",
     "html-webpack-plugin": "^2.30.1",
