@@ -3,18 +3,21 @@
     "id": "nexus-s",
     "name": "Nexus S",
     "age": 1,
-    "snippet": "Fast just got faster with Nexus S."
+    "snippet": "Fast just got faster with Nexus S.",
+    "imageUrl": "images/phones/nexus-s.jpg"
   },
   {
     "id": "motorola-xoom-wifi",
     "name": "Motorola XOOM™ with Wi-Fi",
     "age": 3,
-    "snippet": "The Next, Next , Next Generation tablet."
+    "snippet": "The Next, Next , Next Generation tablet.",
+    "imageUrl": "images/phones/motorola-xoom-wifi.jpg"
   },
   {
     "id": "motorola-xoom",
     "name": "MOTOROLA XOOM™",
     "age": 2,
-    "snippet": "The Next, Next Generation tablet."
+    "snippet": "The Next, Next Generation tablet.",
+    "imageUrl": "images/phones/motorola-xoom.jpg"
   }
 ]

@@ -40,6 +40,9 @@ module.exports = {
     new CopyWebpackPlugin([{
       from: 'src/data',
       to: 'data'
+    }, {
+      from: 'src/images',
+      to: 'images'
     }])
   ],
   devtool: isDevelopment === true ? 'cheap-eval-source-map' : ''
