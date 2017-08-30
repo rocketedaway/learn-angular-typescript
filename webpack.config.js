@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
@@ -35,7 +36,11 @@ module.exports = {
         filename: 'index.html',
         template: './src/index.html'
     }),
-    new CleanWebpackPlugin(['dist'])
+    new CleanWebpackPlugin(['dist']),
+    new CopyWebpackPlugin([{
+      from: 'src/data',
+      to: 'data'
+    }])
   ],
   devtool: isDevelopment === true ? 'cheap-eval-source-map' : ''
 };
